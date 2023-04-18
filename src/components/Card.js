@@ -7,7 +7,12 @@ export default function Card({ card, onCardClick }) {
   }
   return (
     <div className="card">
-      <img className="card__image" src={card.link} onClick={handleClick} />
+      <img
+        className="card__image"
+        src={card.link}
+        onClick={handleClick}
+        alt={card.name}
+      />
       <img src={trash} className="card__trash" />
       <div className="card__description">
         <h2 className="card__title">{card.name}</h2>

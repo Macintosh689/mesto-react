@@ -19,10 +19,12 @@ export default function Main({
       setUserName(data.name);
       setUserDescription(data.about);
       setUserAvatar(data.avatar);
-    });
+    })
+    .catch((err)=>console.log(err));
     api.getAllCards().then((data) => {
       setCards(data);
-    });
+    })
+    .catch((err)=>console.log(err));
   }, []);
 
   return (
